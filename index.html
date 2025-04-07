@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flashcards App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Flashcards</h1>
+        
+        <div class="controls">
+            <button id="prevBtn" class="nav-btn">Previous</button>
+            <button id="addCard" class="add-btn">Add Card</button>
+            <button id="nextBtn" class="nav-btn">Next</button>
+        </div>
+
+        <div class="flashcard-container">
+            <div class="flashcard">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">
+                        <p class="card-text">Click "Add Card" to create your first flashcard!</p>
+                    </div>
+                    <div class="flashcard-back">
+                        <p class="card-text">Start learning!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-counter">
+            <span id="currentCard">0</span>/<span id="totalCards">0</span>
+        </div>
+    </div>
+
+    <div class="modal" id="addCardModal">
+        <div class="modal-content">
+            <h2>Add New Flashcard</h2>
+            <form id="addCardForm">
+                <div class="form-group">
+                    <label for="question">Question:</label>
+                    <textarea id="question" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="answer">Answer:</label>
+                    <textarea id="answer" required></textarea>
+                </div>
+                <div class="modal-buttons">
+                    <button type="button" id="cancelAdd" class="cancel-btn">Cancel</button>
+                    <button type="submit" class="submit-btn">Add Card</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
